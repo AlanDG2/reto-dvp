@@ -1,0 +1,27 @@
+{
+  "name": "reto-tecnico-dvp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "apitest": "npx playwright test test/apiTest",
+    "opencart": "npx playwright test test/openCart",
+    "report": "npx playwright show-report",
+    "loadtest150": "npx artillery run artillery-150users-test.yml --output artillery-150users-report.json",
+    "loadreport150": "npx artillery report artillery-150users-report.json --output artillery-150users-report.html && start artillery-150users-report.html",
+    "loadtestscale": "npx artillery run artillery-scale-test.yml --output artillery-scale-report.json",
+    "loadreportscale": "npx artillery report artillery-scale-report.json --output artillery-scale-report.html && start artillery-scale-report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "artillery": "^2.0.21",
+    "playwright": "^1.55.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0"
+  }
+}

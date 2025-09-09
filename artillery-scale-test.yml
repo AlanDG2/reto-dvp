@@ -1,0 +1,37 @@
+config:
+  target: "https://fakestoreapi.com"
+  phases:
+    - duration: 30
+      arrivalRate: 100
+      name: "100 usuarios concurrentes"
+    - duration: 30
+      arrivalRate: 250
+      name: "250 usuarios concurrentes"
+    - duration: 30
+      arrivalRate: 400
+      name: "400 usuarios concurrentes"
+    - duration: 30
+      arrivalRate: 550
+      name: "550 usuarios concurrentes"
+    - duration: 30
+      arrivalRate: 700
+      name: "700 usuarios concurrentes"
+    - duration: 30
+      arrivalRate: 850
+      name: "850 usuarios concurrentes"
+    - duration: 30
+      arrivalRate: 1000
+      name: "1000 usuarios concurrentes"
+scenarios:
+  - name: "Escalado de usuarios concurrentes"
+    flow:
+      - get:
+          url: "/products"
+      - post:
+          url: "/products"
+          json:
+            title: "Producto carga escalada"
+            price: 99.99
+            description: "Producto creado en prueba de escalado"
+            image: "https://i.pravatar.cc"
+            category: "electronics"

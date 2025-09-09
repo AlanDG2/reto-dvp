@@ -1,0 +1,19 @@
+config:
+  target: "https://fakestoreapi.com"
+  phases:
+    - duration: 120
+      arrivalRate: 150
+      name: "150 usuarios concurrentes durante 2 minutos"
+scenarios:
+  - name: "Carga de 150 usuarios concurrentes"
+    flow:
+      - get:
+          url: "/products"
+      - post:
+          url: "/products"
+          json:
+            title: "Producto carga"
+            price: 99.99
+            description: "Producto creado en prueba de carga"
+            image: "https://i.pravatar.cc"
+            category: "electronics"
