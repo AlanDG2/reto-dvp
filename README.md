@@ -64,6 +64,7 @@ npm install
 
 ## Notas y recomendaciones
 
+- El video  de la ejecucion esta en la raiz del proyecto
 - Todos los scripts están definidos en `package.json`.
 - Los reportes HTML se generan automáticamente tras cada ejecución y pueden abrirse en el navegador.
 - Para más información sobre la API: [FakeStore API Docs](https://fakestoreapi.com/docs)
