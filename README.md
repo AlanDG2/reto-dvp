@@ -51,7 +51,6 @@ npm install
 - Generar y abrir el reporte HTML de la prueba de carga:
   ```bash
   npm run loadreport150
-  start artillery-150users-report.html
   ```
 
 - Ejecutar prueba de escalado (100 a 1000 usuarios):
@@ -61,7 +60,6 @@ npm install
 - Generar y abrir el reporte HTML de la prueba de escalado:
   ```bash
   npm run loadreportscale
-  start artillery-scale-report.html
   ```
 
 ## Notas y recomendaciones
